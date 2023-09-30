@@ -1,10 +1,15 @@
 {
-    "version": 2,
-    "name": "TeraBox",
-    "builds": [
-       { "src": "./views/player.ejs", "use": "@vercel/node" }
-    ],
-    "routes": [
-       { "src": "/(.*)", "dest": "./views/player.ejs" }
-    ]
- }
+  "version": 2,
+  "builds": [
+    {
+      "src": "server.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "server.js"
+    }
+  ]
+}
